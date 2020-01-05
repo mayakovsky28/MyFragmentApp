@@ -1,4 +1,4 @@
-package com.lewisgreaves.myfragmentapp.Controllers.Activities.Fragments;
+package com.lewisgreaves.myfragmentapp.Controllers.Fragments;
 
 
 import android.content.Context;
@@ -22,10 +22,10 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         // Required empty public constructor
     }
 
-    private onButtonClickedListener mCallback;
+    private OnButtonClickedListener mCallback;
 
-    public interface onButtonClickedListener {
-        public void onButtonClicked (View view);
+    public interface OnButtonClickedListener {
+        void onButtonClicked (View view);
     }
 
     @Override
@@ -53,9 +53,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private void createCallbackToParentActivity(){
         try {
             //Parent activity will automatically subscribe to callback
-            mCallback = (onButtonClickedListener) getActivity();
+            mCallback = (OnButtonClickedListener) getActivity();
         } catch (ClassCastException e) {
-            throw new ClassCastException(e.toString()+ " must implement onButtonClickedListener");
+            throw new ClassCastException(e.toString() + " must implement onButtonClickedListener");
         }
     }
 

@@ -4,14 +4,15 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.circularreveal.CircularRevealFrameLayout
-        android:layout_width="match_parent"
+        android:layout_weight="30"
+        android:layout_width="0px"
         android:layout_height="match_parent"
         android:id="@+id/frame_layout_main"/>
 
-    <fragment
-        android:id="@+id/main_fragment"
-        android:layout_width="match_parent"
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:layout_weight="70"
+        android:layout_width="0px"
         android:layout_height="match_parent"
-        android:name="com.lewisgreaves.myfragmentapp.Controllers.Fragments.MainFragment"/>
+        android:id="@+id/frame_layout_main"/>
 
 </LinearLayout>

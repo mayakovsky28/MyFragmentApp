@@ -3,9 +3,15 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.lewisgreaves.myfragmentapp.Controllers.Activities.Fragments.DetailFragment"/>
+        android:id="@+id/frame_layout_detail"/>
+
+    <fragment
+        android:id="@+id/detail_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.lewisgreaves.myfragmentapp.Controllers.Fragments.DetailFragment"/>
 
 </LinearLayout>

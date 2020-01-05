@@ -1,4 +1,4 @@
-package com.lewisgreaves.myfragmentapp.Controllers.Activities.Fragments;
+package com.lewisgreaves.myfragmentapp.Controllers.Fragments;
 
 
 import android.os.Bundle;
