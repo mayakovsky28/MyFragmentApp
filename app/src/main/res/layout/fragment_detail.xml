@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:text="no details to show"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:id="@+id/detail_fragment_text_view"/>
 
 </FrameLayout>

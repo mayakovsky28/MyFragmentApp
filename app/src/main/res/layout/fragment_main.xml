@@ -5,21 +5,50 @@
     android:layout_height="match_parent"
     tools:context=".Controllers.Fragments.MainFragment"
     android:layout_gravity="center"
-    android:background="@color/colorAccent">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello_blank_fragment" />
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/fragment_main_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Show me content!"
         android:background="@color/colorPrimary"
         android:textColor="#FFF"
         android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/fragment_main_button_happy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show me happy content!"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:tag="10"
+        />
+
+    <Button
+        android:id="@+id/fragment_main_button_sad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show me sad content!"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:tag="20"
+        />
+
+    <Button
+        android:id="@+id/fragment_main_button_horrible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show me horrible content!"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:tag="30"
         />
 
 </FrameLayout>

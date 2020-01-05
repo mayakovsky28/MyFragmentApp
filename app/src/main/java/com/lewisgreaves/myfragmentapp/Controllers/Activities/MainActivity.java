@@ -37,8 +37,14 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnBu
 
 
     public void onButtonClicked(View view) {
-        if (detailFragment == null || !detailFragment.isVisible()) {
-            startActivity(new Intent(this, DetailActivity.class));
+        int buttonTag = Integer.parseInt(view.getTag().toString());
+
+        if (detailFragment != null && detailFragment.isVisible()) {
+            detailFragment.updateTextView(buttonTag);
+        } else {
+            Intent i = new Intent(this, DetailActivity.class);
+            i.putExtra(DetailActivity.EXTRA_BUTTON_TAG, buttonTag);
+            startActivity(i);
         }
     }
 

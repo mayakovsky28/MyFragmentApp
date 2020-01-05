@@ -13,6 +13,7 @@ import com.lewisgreaves.myfragmentapp.R;
 public class DetailActivity extends AppCompatActivity {
 
     private DetailFragment detailFragment;
+    public static final String EXTRA_BUTTON_TAG = "com.lewisgreaves.myfragmentapp.Controllers.Activities.DetailActivity.EXTRA_BUTTON_TAG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,12 @@ public class DetailActivity extends AppCompatActivity {
         this.configureAndShowDetailFragment();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        this.updateDetailFragmentTextViewWithIntentTag();
+    }
+
     private void configureAndShowDetailFragment() {
         detailFragment = (DetailFragment)getSupportFragmentManager().findFragmentById(R.id.frame_layout_detail);
 
@@ -29,6 +36,11 @@ public class DetailActivity extends AppCompatActivity {
             detailFragment = new DetailFragment();
             getSupportFragmentManager().beginTransaction().add(R.id.frame_layout_detail, detailFragment).commit();
         }
+    }
+
+    private void updateDetailFragmentTextViewWithIntentTag() {
+        int buttonTag = getIntent().getIntExtra(EXTRA_BUTTON_TAG, 0);
+        detailFragment.updateTextView(buttonTag);
     }
 
 }
